@@ -44,7 +44,6 @@ class StudentsController < ApplicationController
 
   def update
     @students = Sboy.find(params[:id])
-
     if @students.update(article_params)
       redirect_to @students
     else
@@ -55,7 +54,6 @@ class StudentsController < ApplicationController
   def destroy
     @students = Sboy.find(params[:id])
     @students.destroy
-
     redirect_to root_path, status: :see_other
   end
 
